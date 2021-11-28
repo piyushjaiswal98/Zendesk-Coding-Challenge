@@ -1,0 +1,81 @@
+.ticketList{
+    height: inherit;
+    width: inherit;
+    padding: 1%;
+    overflow: auto;
+    .ticket{
+        width: 99%;
+        height: 80px;
+        margin-bottom: 10px;
+        background-color: rgb(89, 101, 119);
+        border-radius: 5px;
+        cursor: pointer;
+        .divbox{
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            .divbox-1{
+                flex: 0 0 80%;
+                p{
+                    margin: 5px 0 0 15px;
+                    text-align: left;
+                }
+            }
+            .divbox-2{
+                flex: 0 0 20%;
+                // padding: 10%;
+                .status{
+                    // padding: 5px;
+                    margin-top: 5px;
+                    margin-left: 15%;
+                    width: 70%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+                .open{
+                    background-color: rgb(236, 70, 70);
+                }
+                .pending{
+                    background-color: #61dafb;
+                }
+                .solved{
+                    background-color: #aaaaaa;
+                }
+            }
+        }
+        
+        .url{
+            width: fit-content;
+            #url{
+                margin: 3px 0 0 56px;
+                padding:0;
+                text-align: left;
+                font-size: 0.8em;
+                z-index: 99;
+                a{
+                    text-decoration: none;
+                    color: #61dafb;
+                }
+            }
+        }
+        
+        .description{
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 7px;
+            height: 90px;
+            overflow: auto;
+            font-size: 0.8em;
+            text-align: left;
+            padding: 1px 10px 1px 10px;
+            visibility: hidden;
+            border: 1px solid #61dafb;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+        }
+    }
+    .expand{
+        height: 180px;
+    }
+}
