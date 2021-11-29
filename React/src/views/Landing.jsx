@@ -84,13 +84,13 @@ const Landing = () => {
 
     return(
 
-        <div className="landing">
+        <div className="landing" data-testid="Landing-1">
 
-            <div className="landing-header">
+            <div className="landing-header" data-testid="Landing-2">
                 <p>Ticket Viewer</p>
             </div>
 
-            <div className="container">
+            <div className="container" data-testid="Landing-3">
                 <div className="sub-container">
                     <div className="box1">
                         <div className="box1-1">

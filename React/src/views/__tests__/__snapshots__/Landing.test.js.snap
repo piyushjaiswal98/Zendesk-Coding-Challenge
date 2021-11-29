@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches Snapshot 1`] = `
+<div
+  className="landing"
+  data-testid="Landing-1"
+>
+  <div
+    className="landing-header"
+    data-testid="Landing-2"
+  >
+    <p>
+      Ticket Viewer
+    </p>
+  </div>
+  <div
+    className="container"
+    data-testid="Landing-3"
+  >
+    <div
+      className="sub-container"
+    >
+      <div
+        className="box1"
+      >
+        <div
+          className="box1-1"
+        >
+          <div
+            className="lensToggle"
+          >
+            <div
+              className="b active"
+              onClick={[Function]}
+            >
+              <p>
+                All Tickets
+              </p>
+            </div>
+            <div
+              className="b inactive"
+              onClick={[Function]}
+            >
+              <p>
+                Filter
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="box1-2"
+        >
+          <input
+            disabled={true}
+            id="input-field"
+            onChange={[Function]}
+            placeholder="Input Ticket Id"
+            type="text"
+            value=""
+          />
+          <button
+            className="inactive"
+            id="submit_button"
+            onClick={[Function]}
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <div
+        className="box2"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches Snapshot 1`] = `
+<div
+  className="ticketList"
+  data-testid="TicketList-1"
+/>
+`;

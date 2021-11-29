@@ -11,7 +11,7 @@ const Error = (props) => {
 
     return(
 
-        <div className="error">
+        <div className="error" data-testid="Error-1">
             <p>Error: {data}</p>
         </div>
     )

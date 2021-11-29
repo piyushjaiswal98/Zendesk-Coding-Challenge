@@ -1,8 +1,22 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+global.config = {
+    uri: process.env.REACT_APP_API_HOST || 'http://localhost:2000/'
+  }
+
+afterEach(()=> {
+    cleanup();
+})
+
+test('Should render App Component', () => {
+    render(<App/>);
+    const AppElement = screen.getByTestId('App-1');
+    expect(AppElement).toBeInTheDocument();
+})
+
+test('Matches Snapshot', () => {
+    const tree = renderer.create(<App/>).toJSON();
+    expect(tree).toMatchSnapshot();
+})
