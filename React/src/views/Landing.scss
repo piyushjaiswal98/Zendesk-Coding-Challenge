@@ -108,15 +108,15 @@
                         cursor: pointer;
                     }
                     button.inactive{
-                        background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
-                        color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170));
+                        background-color: rgb(118, 118, 118);
+                        color: rgb(80, 80, 80);
+                        cursor: default;
                     }
                 }
             }
             .box2{
                 width: 100%;
                 height: 60vh;
-                
             }
         }
     }

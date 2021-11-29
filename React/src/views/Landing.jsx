@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Landing.scss';
 import axios from 'axios';
 import Pageview from '../components/PageView';
+import Error from '../components/Error';
 
 const Landing = () => {
 
@@ -9,6 +10,8 @@ const Landing = () => {
     const [individual, setIndividual] = useState('inactive');
     const [submit_button, setSB] = useState('inactive');
     const [data, setData] = useState([]);
+    const [value, setValue] = useState('');
+    const [errorval, setErrorval] = useState('');
 
 
     useEffect(() => {
@@ -20,7 +23,17 @@ const Landing = () => {
     const getTicketList = () => {
         axios.get(global.config.uri + 'api/fetch')
             .then(res => {
-                setData(res.data.tickets);
+                if(res.data.tickets !== undefined)
+                {
+                    setErrorval('');
+                    setData(res.data.tickets);
+                }
+                else
+                {
+                    setData([]);
+                    setErrorval(res.data.error);
+                }
+                
             })
             .catch(err => {
                 console.log("Error: " + err);
@@ -29,9 +42,11 @@ const Landing = () => {
 
     function handleAll(e) {
         e.preventDefault();
+        getTicketList();
         setIndividual('inactive');
         setAll('active');
-        setSB('inactive')
+        setSB('inactive');
+        setValue('');
         document.getElementById('input-field').disabled = true;
     }
 
@@ -41,6 +56,28 @@ const Landing = () => {
         setIndividual('active');
         setSB('active');
         document.getElementById('input-field').disabled = false;
+    }
+
+    function handleSubmit() {
+        if(submit_button === 'active')
+        {
+            axios.get(global.config.uri + 'api/fetch/ticket?ticket='+value)
+            .then(res => {
+                if(res.data.ticket !== undefined)
+                {
+                    setErrorval('');
+                    setData([res.data.ticket]);
+                }
+                else
+                {
+                    setData([]);
+                    setErrorval(res.data.error);
+                }
+            })
+            .catch(err => {
+                console.log("Error: " + err);
+            });
+        }
     }
 
     return(
@@ -61,12 +98,18 @@ const Landing = () => {
                             </div>
                          </div>
                          <div className="box1-2">
-                            <input type="text" id="input-field" placeholder="Input Ticket Id" disabled></input>
-                            <button className={submit_button} id="submit_button" disabled>Submit</button>
+                            <input type="text" id="input-field" placeholder="Input Ticket Id" value={value} onChange={event => setValue(event.target.value)} disabled></input>
+                            <button className={submit_button} id="submit_button" onClick={handleSubmit}>Submit</button>
                          </div>
                     </div>
                     <div className="box2">
+                        {data!== undefined && data.length>0 &&
                         <Pageview data={data}/>
+                        }
+                        {
+                            (data.length === 0 && errorval.length>0) &&
+                            <Error error={errorval}/>
+                        }
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ const TicketList = (props) => {
     const [data,setData] = useState([]);
 
     useEffect(() => {
+        // console.log(props.ticketList);
         setData(props.ticketList);
     },[props.ticketList]);
 

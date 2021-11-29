@@ -12,10 +12,16 @@ const Pageview = (props) => {
     const pageCount = Math.ceil(data.length / PER_PAGE);
 
     useEffect(() => {
+        // console.log(props.data);
         setData(props.data);
+        if(props.data && props.data.length>25)
+        {
         var d = props.data
                 .slice(0, PER_PAGE);
-        setCdata(d); 
+        setCdata(d); }
+        else{
+            setCdata(props.data);
+        }
     },[props.data]);
 
     function handlePageClick({ selected: selectedPage }) {
