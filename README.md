@@ -39,7 +39,7 @@ This will start a node server at `port:2000`.<br/>
 ## React App
 The React App displays the Tickets to the users.<br/>
 Users have a choice between being able to view all the tickets or search for a particular ticket via it's Ticket Id.<br/>
-Each Ticket stamp expands on clicking to display additional details associated with the ticket.<br/>
+Each Ticket stamp expands on clicking to display additional details associated with the ticket.<br/><br/>
 Original Ticket View.<br/>
 ![collapse1](https://user-images.githubusercontent.com/30807369/143815217-ba7b6bd6-80a6-4df0-a1de-c7e412a2c1ee.png)<br/>
 On clicking the ticket stamp we get a detailed view<br/>
