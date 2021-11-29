@@ -23,17 +23,11 @@ let data = 'email:address:password';
 let buff = new Buffer.from(data);
 let base64data = buff.toString('base64');
 ```
-<br/>
 The APIs fetch the data from the server and host them at an endpoint from where the web app fetches and displays it.<br/>
 The APIs are unit tested and the test codes are provided in the `test` folder.<br/>
-To run the node app execute the following commande.<br/>
+To run the node app execute the following command.<br/>
 ```
 node index.js
-```
-```
-let data = 'email:address:password';
-let buff = new Buffer.from(data);
-let base64data = buff.toString('base64');
 ```
 This will start a node server at `port:2000`.<br/>
 
