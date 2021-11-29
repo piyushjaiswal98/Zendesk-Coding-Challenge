@@ -7,7 +7,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "buildui": "cd client && npm i && npm run build",
-    "start-prod": "npm i && forever start index.js"
+    "start-prod": "npm i && forever start index.js",
+    "test": "mocha"
   },
   "author": "Piyush Jaiswal",
   "license": "ISC",
@@ -22,6 +23,9 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.3",
     "nodemon": "^1.19.1"
   }
 }

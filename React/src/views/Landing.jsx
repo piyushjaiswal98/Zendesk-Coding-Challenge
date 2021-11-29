@@ -36,7 +36,8 @@ const Landing = () => {
                 
             })
             .catch(err => {
-                console.log("Error: " + err);
+                setData([]);
+                setErrorval("Network Error");
             });
     }
 
@@ -75,7 +76,8 @@ const Landing = () => {
                 }
             })
             .catch(err => {
-                console.log("Error: " + err);
+                setData([]);
+                setErrorval("Network Error");
             });
         }
     }

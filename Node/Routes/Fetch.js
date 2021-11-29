@@ -2,6 +2,7 @@ const express = require('express')
 const fetch = express.Router()
 const request = require('request');
 
+// GET ALL the available Tickets
 fetch.get('/', function(req, res) {
 
     var options = {
@@ -28,6 +29,7 @@ fetch.get('/', function(req, res) {
 
 });
 
+// GET Individual Ticket
 fetch.get('/ticket', function(req, res) {
     // console.log(req.query);
     var options = {

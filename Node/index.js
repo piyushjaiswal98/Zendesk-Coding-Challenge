@@ -29,6 +29,6 @@ app.use("/api/fetch", require("./Routes/Fetch"));
 // const hostname = '127.0.0.1';
 const port = process.env.PORT || 2000;
 
-app.listen(port, () => {
+module.exports = app.listen(port, () => {
      console.log(`Server started on port ${port}`);
 });
