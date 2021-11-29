@@ -30,6 +30,11 @@ To run the node app execute the following commande.<br/>
 ```
 node index.js
 ```
+```
+let data = 'email:address:password';
+let buff = new Buffer.from(data);
+let base64data = buff.toString('base64');
+```
 This will start a node server at `port:2000`.<br/>
 
 ## React App
