@@ -1,7 +1,7 @@
 # Zendesk-Coding-Challenge
 
-The Code is divided into two sections:
-1.) Node APIs
+The Code is divided into two sections:__
+1.) Node APIs__
 2.) React App
 
 ## Node API
