@@ -16,7 +16,7 @@ The Code is divided into two sections:<br/>
 2.) React App
 
 ## Node API
-The Node APIs fetch data directly from the zendesk servers. Users need to specify their {emai:password} as a Base64 encoded string in the Authorization headers of the APIs. This is required to facilitate Basic Auth on Zendesk server.<br/>
+The Node APIs fetch data directly from the zendesk servers. Users need to specify their {email:password} as a Base64 encoded string in the Authorization headers of the APIs. This is required to facilitate Basic Auth on Zendesk server.<br/>
 There is an encoder provided in the `index.js` file.
 ```
 let data = 'email:address:password';
@@ -25,7 +25,7 @@ let base64data = buff.toString('base64');
 ```
 The APIs fetch the data from the server and host them at an endpoint from where the web app fetches and displays it.<br/>
 The APIs are unit tested and the test codes are provided in the `test` folder.<br/>
-Tests are carried using the `mocha` and `chai` testing libraries.<br/>
+Tests are carried out using the `mocha` and `chai` testing libraries.<br/>
 To Test the App run the following command.<br/>
 ```
 npm test
