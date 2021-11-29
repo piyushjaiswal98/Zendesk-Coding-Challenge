@@ -4,7 +4,13 @@
 `NodeJS` is required to run the application. You can download it from here.<br/>
 https://nodejs.org/en/
 <br/>
-Clone the Repository and insta
+## Steps
+Clone the Repository and install all the dependencies.<br/>
+Visit both the `Node` and `React` folders and the following command in each of them.<br/>
+```
+npm install
+```
+## Code
 The Code is divided into two sections:<br/>
 1.) Node APIs<br/>
 2.) React App
